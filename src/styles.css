@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+.side-bar {
+    /* width: min-content;  */
+    min-height: 100vh;
+}
+
+.add, .send, .draft{
+    background-color: transparent;
+    border: none;
+}
+
+.add{
+    cursor: pointer;
+}
+
+.send>a, .draft>a {
+    text-decoration: none;
+    color: #000;
+
+}
+
+.send:hover, .draft:hover{
+    background-color: #eaebef;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+
+button:hover{
+    cursor: pointer;
+}
+
+.compose{
+    background-color: #c2e7ff;
+    border-radius: 20px;
+}
+
+.compose:hover{
+    box-shadow: 2px 4px 8px #a4a4a4;
+}
+
+.content{
+    background-color: #f2f6fc;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+
+.del{
+    border: none;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    color: rgb(134, 134, 134);
+}
+
+.del:hover{
+    color: #e36767;
+}
+
+
+.sub{
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.msg{
+    height: 200px;
+    padding-bottom: 150px;
+    border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+.from{
+    width: 210px;
+}
+
+.to{
+    width: 230px;
+}
