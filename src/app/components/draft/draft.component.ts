@@ -40,9 +40,19 @@ export class DraftComponent implements OnInit {
     
 
      //edit
-  // onEdit(item: any) {
-  //   this.inboxObj = item;
-  // }
+  onEdit(item: any) {
+    this.inboxObj = item;
+  }
+
+  onEditClose(){
+    this.inboxObj = {
+      from: '',
+      to: '',
+      subject: '',
+      message: ''
+
+    };
+  }
 
 
 
