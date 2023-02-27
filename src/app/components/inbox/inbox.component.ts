@@ -28,6 +28,8 @@ export class InboxComponent implements OnInit {
     }
   }
 
+
+
   onItemAdd(){
     this.inboxItemArray.push(this.inboxObj);
     localStorage.setItem('inboxObject',JSON.stringify(this.inboxItemArray))

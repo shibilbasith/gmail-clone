@@ -40,19 +40,29 @@ export class DraftComponent implements OnInit {
     
 
      //edit
-  onEdit(item: any) {
-    this.inboxObj = item;
+  onEdit(item: any, index:any) {
+
+      //edit
+      this.inboxObj = item;
+
+      //delt from draft
+      let ind = this.draftItemArray.indexOf(this.draftItemArray[index]);
+      if (ind > -1){
+        this.draftItemArray.splice(ind, 1);
+      }
+      localStorage.setItem("draftObject", JSON.stringify(this.draftItemArray));
+
   }
 
-  onEditClose(){
-    this.inboxObj = {
-      from: '',
-      to: '',
-      subject: '',
-      message: ''
+  // onEditClose(){
+  //   this.inboxObj = {
+  //     from: '',
+  //     to: '',
+  //     subject: '',
+  //     message: ''
 
-    };
-  }
+  //   };
+  // }
 
 
 
@@ -64,8 +74,9 @@ export class DraftComponent implements OnInit {
         to: '',
         subject: '',
         message: ''
-  
       };
+
+
     }
   
     //if we click draft //it stores in diff address name

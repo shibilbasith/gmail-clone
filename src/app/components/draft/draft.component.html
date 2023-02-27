@@ -20,7 +20,7 @@
       *ngFor="let item of draftItemArray; let i = index">
       
       <div
-      data-bs-toggle="modal" data-bs-target="#staticBackdropEdit"  (click)="onEdit(item)"
+      data-bs-toggle="modal" data-bs-target="#staticBackdropEdit"  (click)="onEdit(item,i)"
       class="d-flex justify-content w-100 p-3" >
 
           <div class=" text-danger">Draft</div>
@@ -90,7 +90,7 @@
         <input class="mt-1 w-100 sub msg" type="text" placeholder="Message:" [(ngModel)]="inboxObj.message">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal" (click)="onEditClose()">Close</button>
+        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal" (click)="onItemDraft()">Close</button>
         <button type="button" class="btn btn-primary rounded-pill" data-bs-dismiss="modal"
           (click)="onItemAdd()">Send</button>
       </div>
